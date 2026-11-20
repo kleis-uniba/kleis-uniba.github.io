@@ -4,41 +4,97 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KLEIS Laboratory</title>
+  <meta name="description" content="KLEIS Laboratory – Knowledge, Learning, Explainability, Inference and Semantics. Dipartimento di Informatica, Università di Bari Aldo Moro.">
   <style>
+    :root {
+      --text: #1f2328;
+      --muted: #59636e;
+      --accent: #0969da;
+      --border: #d1d9e0;
+      --card: #f6f8fa;
+    }
+    * { box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      max-width: 40rem;
-      margin: 10vh auto;
-      padding: 0 1.5rem;
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 8vh 1.5rem 4rem;
       line-height: 1.6;
-      color: #1f2328;
+      color: var(--text);
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; }
-    a { color: #0969da; }
-    .sub { color: #59636e; margin-top: 0.25rem; }
+    header { padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 2.2rem; margin: 0; letter-spacing: -0.02em; }
+    .tagline { font-size: 1.1rem; margin: 0.25rem 0 0; }
+    .affiliation { color: var(--muted); margin: 0.25rem 0 1.25rem; }
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1rem;
+      border-radius: 6px;
+      background: var(--text);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .github-btn:hover { background: #000; }
+    .github-btn svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }
+    h2 { font-size: 1.2rem; margin: 2.25rem 0 0.75rem; }
+    a { color: var(--accent); }
+    ul.people { list-style: none; padding: 0; margin: 0; }
+    ul.people li { padding: 0.35rem 0; }
+    .role { color: var(--muted); }
+    .repos { display: grid; gap: 0.75rem; }
+    .repo {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+    }
+    .repo-name { font-weight: 600; font-size: 1.05rem; }
+    .repo-links { margin-top: 0.25rem; font-size: 0.95rem; }
+    .repo-links a { margin-right: 1rem; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
   </style>
 </head>
 <body>
-  <h1>KLEIS Laboratory</h1>
-  <p class="sub">
-    Knowledge, Learning, Explainability, Inference and Semantics<br>
-    Dipartimento di Informatica &ndash; Universit&agrave; di Bari Aldo Moro
-  </p>
+  <header>
+    <h1>KLEIS Laboratory</h1>
+    <p class="tagline">Knowledge, Learning, Explainability, Inference and Semantics</p>
+    <p class="affiliation">Dipartimento di Informatica &ndash; Universit&agrave; di Bari Aldo Moro</p>
+    <a class="github-btn" href="https://github.com/KLEIS-UNIBA">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      github.com/KLEIS-UNIBA
+    </a>
+  </header>
 
   <h2>Researchers</h2>
-  <ul>
+  <ul class="people">
     <li><a href="https://www.uniba.it/it/docenti/damato-claudia">Claudia d'Amato</a></li>
     <li><a href="https://www.uniba.it/it/docenti/fanizzi-nicola/nicola-fanizzi">Nicola Fanizzi</a></li>
-    <li><a href="https://rbarile17.github.io/robertobarile.github.io/">Roberto Barile</a> &mdash; PhD Student</li>
-    <li><a href="https://ivandiliso.github.io/#/#top">Ivan Diliso</a> &mdash; PhD Student</li>
+    <li><a href="https://rbarile17.github.io/robertobarile.github.io/">Roberto Barile</a> <span class="role">&mdash; PhD Student</span></li>
+    <li><a href="https://ivandiliso.github.io/#/#top">Ivan Diliso</a> <span class="role">&mdash; PhD Student</span></li>
   </ul>
 
   <h2>Repositories</h2>
-  <ul>
-    <li><a href="https://github.com/KLEIS-UNIBA/jedikg">JediKG</a> &middot; <a href="https://kleis-uniba.github.io/jedikg/">docs</a></li>
-  </ul>
+  <div class="repos">
+    <div class="repo">
+      <div class="repo-name">JediKG</div>
+      <div class="repo-links">
+        <a href="https://github.com/KLEIS-UNIBA/jedikg">Repository</a>
+        <a href="https://kleis-uniba.github.io/jedikg/">Documentation</a>
+      </div>
+    </div>
+    <div class="repo">
+      <div class="repo-name">PyKEEN-NSX</div>
+      <div class="repo-links">
+        <a href="https://github.com/KLEIS-UNIBA/pykeen-nsx">Repository</a>
+        <a href="https://kleis-uniba.github.io/pykeen-nsx/">Documentation</a>
+      </div>
+    </div>
+  </div>
 
-  <p><a href="https://github.com/KLEIS-UNIBA">github.com/KLEIS-UNIBA</a></p>
+  <footer>&copy; KLEIS Laboratory &middot; Universit&agrave; di Bari Aldo Moro</footer>
 </body>
 </html>
